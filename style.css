@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar Navigation Dropdown */
+
+.sidebar-item .sidebar-dropdown {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+}
+
+#sidebar.expand .sidebar-item .has-dropdown.active+.sidebar-dropdown {
+    display: block;
+    max-height: 15em;
+    transition: all 200ms linear;
+    opacity: 1;
+}
+
+/* Dropdown Icon */
+
+#sidebar.expand .sidebar-link.has-dropdown::after {
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+}
+
+#sidebar.expand .sidebar-link.has-dropdown.active::after {
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+/* Sidebar Dropdown Hover Effect */
+
+.sidebar-dropdown a.sidebar-link {
+    position: relative;
+    padding-left: 3rem;
+    transition: all 0.5s;
+}
+
+.sidebar-dropdown a.sidebar-link::before {
+    content: "";
+    height: 0.125rem;
+    width: 0.375rem;
+    background-color: #ffffff80;
+    position: absolute;
+    left: 1.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s;
+}
+
+.sidebar-dropdown a.sidebar-link:hover:before {
+    width: 1.25rem;
+}
+
+.sidebar-dropdown a.sidebar-link:hover {
+    background: transparent;
+    border-left: 3px solid transparent;
+    padding-left: 3.8rem;
+    color: #7257f2;
+}
+
+/* Admin Dashboard */
+
+
+
+/* Screen size less than 768px */
+
+@media (min-width:768px) {}
