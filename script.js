@@ -35,7 +35,7 @@ userProfile.addEventListener("click", function () {
 
 // Chart.JS
 
-const ctx = document.getElementById("bar-chart-grouped");
+const ctx = document.getElementById("myChart");
 
 new Chart(ctx, {
   type: "doughnut",
