@@ -39,10 +39,6 @@ const ctx = document.getElementById("bar-chart-grouped");
 
 new Chart(ctx, {
   type: "doughnut",
-  maintainAspectRatio: false,
-  onResize: function () {
-    alert("red");
-  },
   data: {
     labels: ["Red", "Blue", "Yellow"],
     datasets: [
@@ -57,6 +53,9 @@ new Chart(ctx, {
         hoverOffset: 4,
       },
     ],
+  },
+  options: {
+    maintainAspectRatio: false,
   },
 });
 
